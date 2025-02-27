@@ -1,0 +1,318 @@
+/* 
+Bean Haven Café - Enhanced Menu Styles
+*/
+
+/* Add at the top of your existing styles */
+.page-header {
+    background-image: url('https://images.piclumen.com/normal/20250227/14/2c798f99aafb44c39d61f98fc023d554.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 4rem 0;
+    text-align: center;
+    position: relative;
+    color: var(--white);
+}
+
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay */
+    z-index: 1;
+}
+
+.page-header-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Category Headings */
+.category-heading {
+    color: var(--brown);
+    font-family: 'Lora', serif;
+    position: relative;
+    padding-bottom: 0.5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.category-heading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--cream);
+}
+
+/* Menu Items Grid */
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.menu-item {
+    background-color: var(--white);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+.menu-item:hover::before {
+    background-color: var(--gold);
+}
+
+.menu-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.menu-item h3 {
+    color: var(--brown);
+    font-family: 'Lora', serif;
+    margin-bottom: 0.25rem;
+}
+
+.price {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: var(--dark-brown);
+}
+
+.description {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--gray);
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.details-btn {
+    background-color: transparent;
+    color: var(--brown);
+    border: 1px solid var(--brown);
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.details-btn:hover {
+    background-color: var(--brown);
+    color: var(--white);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    overflow: auto;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: var(--white);
+    margin: 2rem;
+    max-width: 800px;
+    width: 90%;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    position: relative;
+    animation: modalFadeIn 0.4s ease;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2rem;
+    color: var(--dark-brown);
+    cursor: pointer;
+    transition: color 0.3s ease;
+    z-index: 10;
+}
+
+.close-modal:hover {
+    color: var(--gold);
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.modal-image {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.modal-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.modal-details {
+    flex: 1;
+}
+
+.modal-details h3 {
+    color: var(--brown);
+    font-family: 'Lora', serif;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.modal-price {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: var(--dark-brown);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.modal-description {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.modal-allergy {
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    color: var(--gray);
+    font-size: 0.9rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--cream);
+}
+
+/* Download Menu Button */
+.menu-pdf {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.menu-pdf .btn {
+    background-color: var(--gold);
+    color: var(--brown);
+    border: none;
+    font-weight: 600;
+}
+
+.menu-pdf .btn:hover {
+    background-color: var(--brown);
+    color: var(--white);
+}
+
+/* Allergy Notice */
+.allergy-notice {
+    background-color: var(--cream);
+    padding: 1rem;
+    margin-top: 3rem;
+    border-radius: 8px;
+    text-align: center;
+    color: var(--dark-brown);
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+    .modal-body {
+        flex-direction: column;
+    }
+    
+    .modal-image {
+        margin-right: 0;
+        margin-bottom: 1.5rem;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-items {
+        grid-template-columns: 1fr;
+    }
+    
+    .modal-content {
+        width: 95%;
+        margin: 1rem;
+    }
+    
+    .modal-image img {
+        height: 250px;
+    }
+}
+
+@media (min-width: 992px) {
+    .modal-body {
+        flex-direction: row;
+    }
+    
+    .modal-image {
+        width: 40%;
+        margin-right: 2rem;
+        margin-bottom: 0;
+    }
+    
+    .modal-details {
+        width: 60%;
+    }
+} 

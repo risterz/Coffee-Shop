@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservations | Bean Haven Café</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <div class="logo">Bean Haven Café</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="reservations.html" class="reservation-btn active">Reservations</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>Reserve a Table</h1>
+            <p>Plan your visit to Bean Haven Café</p>
+        </section>
+
+        <section class="reservation-container">
+            <div class="reservation-info">
+                <h2>Reservation Information</h2>
+                <p>We look forward to hosting you at Bean Haven! Please note that reservations are recommended for peak hours (weekends and weekday lunch).</p>
+                <p>For groups over 10, please call us directly at (555) 123-4567.</p>
+                <p>Have a special occasion? Let us know in the "Special Requests" section and we'll do our best to make your visit memorable.</p>
+                <div class="reservation-image">
+                    <img src="https://source.unsplash.com/random/600x400/?cafe-interior" alt="Bean Haven Café interior" class="img-responsive">
+                </div>
+            </div>
+
+            <div class="reservation-form-container">
+                <h2>Make Your Reservation</h2>
+                <form id="reservation-form" class="reservation-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Date</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Time</label>
+                        <select id="time" name="time" required>
+                            <option value="" disabled selected>Select a time</option>
+                            <option value="7:00">7:00 AM</option>
+                            <option value="7:30">7:30 AM</option>
+                            <option value="8:00">8:00 AM</option>
+                            <option value="8:30">8:30 AM</option>
+                            <option value="9:00">9:00 AM</option>
+                            <option value="9:30">9:30 AM</option>
+                            <option value="10:00">10:00 AM</option>
+                            <option value="10:30">10:30 AM</option>
+                            <option value="11:00">11:00 AM</option>
+                            <option value="11:30">11:30 AM</option>
+                            <option value="12:00">12:00 PM</option>
+                            <option value="12:30">12:30 PM</option>
+                            <option value="1:00">1:00 PM</option>
+                            <option value="1:30">1:30 PM</option>
+                            <option value="2:00">2:00 PM</option>
+                            <option value="2:30">2:30 PM</option>
+                            <option value="3:00">3:00 PM</option>
+                            <option value="3:30">3:30 PM</option>
+                            <option value="4:00">4:00 PM</option>
+                            <option value="4:30">4:30 PM</option>
+                            <option value="5:00">5:00 PM</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="party-size">Party Size</label>
+                        <select id="party-size" name="party-size" required>
+                            <option value="" disabled selected>Select party size</option>
+                            <option value="1">1 person</option>
+                            <option value="2">2 people</option>
+                            <option value="3">3 people</option>
+                            <option value="4">4 people</option>
+                            <option value="5">5 people</option>
+                            <option value="6">6 people</option>
+                            <option value="7">7 people</option>
+                            <option value="8">8 people</option>
+                            <option value="9">9 people</option>
+                            <option value="10">10 people</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="special-requests">Special Requests</label>
+                        <textarea id="special-requests" name="special-requests" rows="4"></textarea>
+                    </div>
+                    <div class="form-note">
+                        <p>Note: For groups over 10, please call us directly at (555) 123-4567.</p>
+                    </div>
+                    <button type="submit" class="btn primary-btn">Submit Reservation</button>
+                </form>
+                <div id="reservation-success" class="reservation-success hidden">
+                    <p>Thanks! We'll confirm your reservation soon.</p>
+                    <p>You should receive a confirmation email shortly.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>Bean Haven Café</h3>
+                <p>123 Brew Street, Coffeeville, CA 90210</p>
+                <p>(555) 123-4567</p>
+                <p>hello@beanhavencafe.com</p>
+            </div>
+            <div class="footer-hours">
+                <h3>Hours</h3>
+                <p>Monday - Friday: 7 AM - 6 PM</p>
+                <p>Saturday - Sunday: 8 AM - 4 PM</p>
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://instagram.com/beanhavencafe" target="_blank" aria-label="Instagram"><i class="social-icon">Instagram</i></a>
+                    <a href="https://facebook.com/beanhavencafe" target="_blank" aria-label="Facebook"><i class="social-icon">Facebook</i></a>
+                    <a href="https://twitter.com/beanhavencafe" target="_blank" aria-label="Twitter"><i class="social-icon">Twitter</i></a>
+                </div>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Stay Updated</h3>
+                <form id="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn primary-btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Bean Haven Café. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html> 

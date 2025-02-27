@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Menu | Bean Haven Café</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/menu-styles.css">
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <div class="logo">Bean Haven Café</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html" class="active">Menu</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="reservations.html" class="reservation-btn">Reservations</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>Our Menu</h1>
+            <p>Crafted with care, served with love</p>
+        </section>
+
+        <section class="menu-container">
+            <div class="menu-tabs">
+                <button class="menu-tab active" data-category="drinks">Drinks</button>
+                <button class="menu-tab" data-category="pastries">Pastries</button>
+                <button class="menu-tab" data-category="specials">Daily Specials</button>
+            </div>
+
+            <div class="menu-pdf">
+                <a href="assets/menu.pdf" class="btn download-btn" download>
+                    <i class="download-icon"></i> Download Our PDF Menu
+                </a>
+            </div>
+
+            <div class="menu-section active" id="drinks">
+                <h2 class="category-heading">Hot Coffee</h2>
+                <div class="menu-items">
+                    <!-- Espresso -->
+                    <div class="menu-item" data-item="espresso">
+                        <div class="menu-item-header">
+                            <h3>Espresso</h3>
+                            <span class="price">$2.50</span>
+                        </div>
+                        <p class="description">Bold and rich, single shot</p>
+                        <button class="details-btn">View Details</button>
+                    </div>
+                    
+                    <!-- Americano -->
+                    <div class="menu-item" data-item="americano">
+                        <div class="menu-item-header">
+                            <h3>Americano</h3>
+                            <span class="price">$3.50</span>
+                        </div>
+                        <p class="description">Espresso diluted with hot water</p>
+                        <button class="details-btn">View Details</button>
+                    </div>
+                    
+                    <!-- Cappuccino -->
+                    <div class="menu-item" data-item="cappuccino">
+                        <div class="menu-item-header">
+                            <h3>Cappuccino</h3>
+                            <span class="price">$4.50</span>
+                        </div>
+                        <p class="description">Espresso with steamed milk and foam</p>
+                        <button class="details-btn">View Details</button>
+                    </div>
+                    
+                    <!-- Latte -->
+                    <div class="menu-item" data-item="latte">
+                        <div class="menu-item-header">
+                            <h3>Latte</h3>
+                            <span class="price">$4.75</span>
+                        </div>
+                        <p class="description">Espresso with steamed milk and light foam</p>
+                        <button class="details-btn">View Details</button>
+                    </div>
+                </div>
+
+                <h2 class="category-heading">Iced Coffee</h2>
+                <div class="menu-items">
+                    <!-- Iced Americano -->
+                    <div class="menu-item" data-item="iced-americano">
+                        <div class="menu-item-header">
+                            <h3>Iced Americano</h3>
+                            <span class="price">$4.00</span>
+                        </div>
+                        <p class="description">Chilled espresso with cold water</p>
+                        <button class="details-btn">View Details</button>
+                    </div>
+                    
+                    <!-- Cold Brew -->
+                    <div class="menu-item" data-item="cold-brew">
+                        <div class="menu-item-header">
+                            <h3>Cold Brew</h3>
+                            <span class="price">$4.50</span>
+                        </div>
+                        <p class="description">Slow-steeped for 12 hours</p>
+                        <button class="details-btn">View Details</button>
+                    </div>
+                    
+                    <!-- Iced Latte -->
+                    <div class="menu-item" data-item="iced-latte">
+                        <div class="menu-item-header">
+                            <h3>Iced Latte</h3>
+                            <span class="price">$5.00</span>
+                        </div>
+                        <p class="description">Espresso, cold milk, and ice</p>
+                        <button class="details-btn">View Details</button>
+                    </div>
+                </div>
+
+                <h2 class="category-heading">Teas</h2>
+                <div class="menu-items">
+                    <!-- Earl Grey -->
+                    <div class="menu-item" data-item="earl-grey">
+                        <div class="menu-item-header">
+                            <h3>Earl Grey</h3>
+                            <span class="price">$3.50</span>
+                        </div>
+                        <p class="description">Classic black tea with bergamot</p>
+                        <button class="details-btn">View Details</button>
+                    </div>
+                    
+                    <!-- Green Tea -->
+                    <div class="menu-item" data-item="green-tea">
+                        <div class="menu-item-header">
+                            <h3>Green Tea</h3>
+                            <span class="price">$3.50</span>
+                        </div>
+                        <p class="description">Delicate and refreshing</p>
+                        <button class="details-btn">View Details</button>
+                    </div>
+                    
+                    <!-- Chamomile -->
+                    <div class="menu-item" data-item="chamomile">
+                        <div class="menu-item-header">
+                            <h3>Chamomile</h3>
+                            <span class="price">$3.75</span>
+                        </div>
+                        <p class="description">Soothing herbal infusion</p>
+                        <button class="details-btn">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-section" id="pastries">
+                <h2 class="category-heading">Pastries</h2>
+                <div class="menu-items">
+                    <!-- Butter Croissant -->
+                    <div class="menu-item" data-item="butter-croissant">
+                        <div class="menu-item-header">
+                            <h3>Butter Croissant</h3>
+                            <span class="price">$3.50</span>
+                        </div>
+                        <p class="description">Flaky and buttery, baked fresh daily</p>
+                        <button class="details-btn">View Details</button>
+                    </div>
+                    
+                    <!-- Chocolate Muffin -->
+                    <div class="menu-item" data-item="chocolate-muffin">
+                        <div class="menu-item-header">
+                            <h3>Chocolate Muffin</h3>
+                            <span class="price">$4.00</span>
+                        </div>
+                        <p class="description">Rich chocolate with chocolate chips</p>
+                        <button class="details-btn">View Details</button>
+                    </div>
+                    
+                    <!-- Almond Danish -->
+                    <div class="menu-item" data-item="almond-danish">
+                        <div class="menu-item-header">
+                            <h3>Almond Danish</h3>
+                            <span class="price">$4.25</span>
+                        </div>
+                        <p class="description">Flaky pastry with almond filling</p>
+                        <button class="details-btn">View Details</button>
+                    </div>
+                    
+                    <!-- Blueberry Scone -->
+                    <div class="menu-item" data-item="blueberry-scone">
+                        <div class="menu-item-header">
+                            <h3>Blueberry Scone</h3>
+                            <span class="price">$3.75</span>
+                        </div>
+                        <p class="description">Tender scone loaded with blueberries</p>
+                        <button class="details-btn">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-section" id="specials">
+                <h2 class="category-heading">Daily Specials</h2>
+                <div class="menu-items">
+                    <!-- Monday Mocha -->
+                    <div class="menu-item" data-item="monday-mocha">
+                        <div class="menu-item-header">
+                            <h3>Monday Mocha</h3>
+                            <span class="price">$5.00</span>
+                        </div>
+                        <p class="description">Espresso, chocolate, and steamed milk to start your week</p>
+                        <button class="details-btn">View Details</button>
+                    </div>
+                    
+                    <!-- Tuesday Tiramisu Latte -->
+                    <div class="menu-item" data-item="tuesday-tiramisu">
+                        <div class="menu-item-header">
+                            <h3>Tuesday Tiramisu Latte</h3>
+                            <span class="price">$5.50</span>
+                        </div>
+                        <p class="description">Latte with mascarpone and cocoa flavors</p>
+                        <button class="details-btn">View Details</button>
+                    </div>
+                    
+                    <!-- Wednesday Whiskey Caramel Cream -->
+                    <div class="menu-item" data-item="wednesday-whiskey">
+                        <div class="menu-item-header">
+                            <h3>Wednesday Whiskey Caramel Cream</h3>
+                            <span class="price">$5.75</span>
+                        </div>
+                        <p class="description">Coffee with whiskey-flavored caramel (non-alcoholic)</p>
+                        <button class="details-btn">View Details</button>
+                    </div>
+                    
+                    <!-- Thursday Toffee Nut Latte -->
+                    <div class="menu-item" data-item="thursday-toffee">
+                        <div class="menu-item-header">
+                            <h3>Thursday Toffee Nut Latte</h3>
+                            <span class="price">$5.50</span>
+                        </div>
+                        <p class="description">Rich toffee and nutty flavors in our signature latte</p>
+                        <button class="details-btn">View Details</button>
+                    </div>
+                    
+                    <!-- Friday Frozen Frappe -->
+                    <div class="menu-item" data-item="friday-frappe">
+                        <div class="menu-item-header">
+                            <h3>Friday Frozen Frappe</h3>
+                            <span class="price">$6.00</span>
+                        </div>
+                        <p class="description">Blended coffee treat to celebrate the weekend</p>
+                        <button class="details-btn">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="allergy-notice">
+                <p>Please inform staff of allergies—some items contain nuts or gluten.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal for menu item details -->
+    <div id="item-modal" class="modal" aria-hidden="true">
+        <div class="modal-content">
+            <span class="close-modal" aria-label="Close modal">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modal-img" src="" alt="">
+                </div>
+                <div class="modal-details">
+                    <h3 id="modal-title"></h3>
+                    <p id="modal-price" class="modal-price"></p>
+                    <p id="modal-description" class="modal-description"></p>
+                    <p id="modal-allergy" class="modal-allergy"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>Bean Haven Café</h3>
+                <p>123 Brew Street, Coffeeville, CA 90210</p>
+                <p>(555) 123-4567</p>
+                <p>hello@beanhavencafe.com</p>
+            </div>
+            <div class="footer-hours">
+                <h3>Hours</h3>
+                <p>Monday - Friday: 7 AM - 6 PM</p>
+                <p>Saturday - Sunday: 8 AM - 4 PM</p>
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://instagram.com/beanhavencafe" target="_blank" aria-label="Instagram"><i class="social-icon">Instagram</i></a>
+                    <a href="https://facebook.com/beanhavencafe" target="_blank" aria-label="Facebook"><i class="social-icon">Facebook</i></a>
+                    <a href="https://twitter.com/beanhavencafe" target="_blank" aria-label="Twitter"><i class="social-icon">Twitter</i></a>
+                </div>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Stay Updated</h3>
+                <form id="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn primary-btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Bean Haven Café. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+    <script src="js/menu-scripts.js"></script>
+</body>
+</html> 
